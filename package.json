@@ -1,0 +1,25 @@
+{
+  "name": "autopet",
+  "version": "1.0.0",
+  "description": "AutoPet",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "jest": "^27.2.3",
+    "jest-puppeteer": "^6.0.0",
+    "mocha": "^9.1.2",
+    "prettier": "^2.4.1",
+    "puppeteer": "^10.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6"
+  }
+}
