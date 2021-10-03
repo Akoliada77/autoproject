@@ -23,7 +23,7 @@ describe('Checking if every funcionality is shown in ElementsPage', () => {
     it("RadioButtonIsShown", async()=> {
         await elementspage.clickOnRadioButton()
     })
-    it.only("WebTablesAreShown", async()=> {
+    it("WebTablesAreShown", async()=> {
         await elementspage.visit()
         await elementspage.clickOnWebTables()
     })

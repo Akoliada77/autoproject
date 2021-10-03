@@ -14,7 +14,7 @@ describe ('Checking if links work in Homepage', () => {
     it("HomePageIsLoaded", async() =>{
         await homepage.visit()
     })
-    it.only("ClickOnElements", async() =>{
+    it("ClickOnElements", async() =>{
         await homepage.clickOnElementsPage()
     })
     it("ClickOnForms", async() =>{

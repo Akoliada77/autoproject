@@ -18,7 +18,7 @@ export default class Elements {
         await elementspage.clickOnTextBox()
         await typeText(page, '#userName', rndtext)
         await page.waitFor(1000)
-        const text = await getText(page,"div:nth-child(2)")
+        const text = await getText(page,"#userName")
         expect(rndtext).to.eq(text)
     }
 }

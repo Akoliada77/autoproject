@@ -14,7 +14,7 @@ describe('Checking if every functionality works in ElementsPage', () => {
         elements = new Elements()
     })
     
-    it('TextBoxWorks', async() => {
+    it.skip('TextBoxWorks', async() => {
         await elements.fullNameWorks()
     })
 
