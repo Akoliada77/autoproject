@@ -15,12 +15,15 @@ describe('Checking if every funcionality is shown in ElementsPage', () => {
         await elementspage.elementsAreLoaded()
     })
     it("TextBoxIsShown", async()=> {
+        await elementspage.visit()
         await elementspage.clickOnTextBox()
     })
     it("CheckBoxIsShown", async()=> {
+        await elementspage.visit()
         await elementspage.clickOnCheckBox()
     })
     it("RadioButtonIsShown", async()=> {
+        await elementspage.visit()
         await elementspage.clickOnRadioButton()
     })
     it("WebTablesAreShown", async()=> {
@@ -28,6 +31,7 @@ describe('Checking if every funcionality is shown in ElementsPage', () => {
         await elementspage.clickOnWebTables()
     })
     it("ButtonsAreShown", async()=> {
+        await elementspage.visit()
         await elementspage.clickOnButtons()
     })
     it("LinksAreShown", async()=> {
@@ -35,6 +39,7 @@ describe('Checking if every funcionality is shown in ElementsPage', () => {
         await elementspage.clickOnLinks()
     })
     it("BrokenLinksAreShown", async()=> {
+        await elementspage.visit()
         await elementspage.clickOnBrokenLinks()
     })
     it("UploadAndDownloadAreShown", async()=> {

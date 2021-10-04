@@ -31,9 +31,8 @@ export default class ElementsPage {
         await page.waitForSelector('#noRadio')
     }
     async clickOnWebTables() {
-        await click(page,'#item-3')
+        await click(page,'#item-3 > span')
         await page.waitForSelector('#addNewRecordButton')
-        await page.waitForSelector('.ReactTable.-striped.-highlight')
         await page.waitForSelector('#searchBox')
         await page.waitForSelector('.rt-tbody')
     }
@@ -42,22 +41,21 @@ export default class ElementsPage {
         await page.waitForSelector('#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div:nth-child(1)')
         await page.waitForSelector('#doubleClickBtn')
         await page.waitForSelector('#rightClickBtn')
-        await page.waitForSelector('#XY9sZ')
     }
     async clickOnLinks() {
         await click(page,'#item-5')
         await page.waitForSelector('#simpleLink')
         await page.waitForSelector('#dynamicLink')
         await page.waitForSelector('#created')
-        await page.waitForSelector('#no-content')
-        await page.waitForSelector('#moved')
-        await page.waitForSelector('#bad-request')
-        await page.waitForSelector('#unauthorized')
-        await page.waitForSelector('#forbidden')
-        await page.waitForSelector('#invalid-url')
+        // await page.waitForSelector('#no-content')
+        // await page.waitForSelector('#moved')
+        // await page.waitForSelector('#bad-request')
+        // await page.waitForSelector('#unauthorized')
+        // await page.waitForSelector('#forbidden')
+        // await page.waitForSelector('#invalid-url')
     }
     async clickOnBrokenLinks() {
-        await click(page,'#item-6')
+        await click(page,'#item-6 > span')
         await page.waitForSelector('#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div:nth-child(1) > img:nth-child(2)')
         await page.waitForSelector('#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div:nth-child(1) > img:nth-child(6)')
         await page.waitForSelector('#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div:nth-child(1) > a:nth-child(10)')
@@ -72,7 +70,7 @@ export default class ElementsPage {
     async clickOnDynamicProperties() {
         await click(page,'#item-8')
         await page.waitForSelector('#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div:nth-child(1)')
-        await page.waitForSelector('#uploadFile')
+        await page.waitForSelector('#enableAfter')
         await page.waitForSelector('#colorChange')
 
     }

@@ -14,8 +14,17 @@ describe('Checking if every functionality works in ElementsPage', () => {
         elements = new Elements()
     })
     
-    it.skip('TextBoxWorks', async() => {
-        await elements.fullNameWorks()
+    it('checkIfTextBoxWorks', async() => {
+        await elementspage.visit()
+        await elementspage.elementsAreLoaded()
+        await elementspage.clickOnTextBox()
+        await elements.submitTextBox()
+    })
+    it.skip('checkIfCheckBoxWorks', async() =>{
+        await elementspage.visit()
+        await elementspage.elementsAreLoaded()
+        await elementspage.clickOnCheckBox()
+        // await elements.
     })
 
 })
