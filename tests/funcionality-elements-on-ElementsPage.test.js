@@ -20,11 +20,24 @@ describe('Checking if every functionality works in ElementsPage', () => {
         await elementspage.clickOnTextBox()
         await elements.submitTextBox()
     })
-    it.skip('checkIfCheckBoxWorks', async() =>{
+    it('checkIfCheckBoxWorks', async() =>{
         await elementspage.visit()
         await elementspage.elementsAreLoaded()
         await elementspage.clickOnCheckBox()
-        // await elements.
+        await elements.submitCheckBox()
     })
+    it('checkIfRadionbuttonWorks', async()=> {
+        await elementspage.visit()
+        await elementspage.elementsAreLoaded()
+        await elementspage.clickOnRadioButton()
+        await elements.submitRadionButton()
+    })
+    it('checkIfWebTablesWork', async() =>{
+        await elementspage.visit()
+        await elementspage.elementsAreLoaded()
+        await elementspage.clickOnWebTables()
+        await elements.submitAddingInWebTables()
+    })
+
 
 })
