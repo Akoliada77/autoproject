@@ -37,6 +37,8 @@ describe('Checking if every functionality works in ElementsPage', () => {
         await elementspage.elementsAreLoaded()
         await elementspage.clickOnWebTables()
         await elements.submitAddingInWebTables()
+        await elements.submitSearchInWebTables()
+        await elements.deletingStringsInWebTables()
     })
 
 
