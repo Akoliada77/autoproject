@@ -36,9 +36,18 @@ describe('Checking if every functionality works in ElementsPage', () => {
         await elementspage.visit()
         await elementspage.elementsAreLoaded()
         await elementspage.clickOnWebTables()
-        await elements.submitAddingInWebTables()
-        await elements.submitSearchInWebTables()
-        await elements.deletingStringsInWebTables()
+        await elements.submitAdding()
+        await elements.submitSearch()
+        await elements.deletingStrings()
+        await elements.updateString()
+    })
+    it.only('checkIfButtonsWork', async() => {
+        await elementspage.visit()
+        await elementspage.elementsAreLoaded()
+        await elementspage.clickOnButtons()
+        await elements.clickDoubleClick()
+        await elements.clickRightClick()
+        await elements.clickOnDynamicButton()
     })
 
 
