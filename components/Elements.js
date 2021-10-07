@@ -1,6 +1,6 @@
 import HomePage from '../pages/HomePage'
 import ElementsPage from '../pages/ElementsPage'
-import { click, doubleClick, getCount, getText, selectText, shouldNotExist, typeText } from '../lib/helpers'
+import { click, doubleClick, getCount, getText, rightClick, selectText, shouldNotExist, typeText } from '../lib/helpers'
 import { generateEmail, generateID, generateNumbers } from '../lib/utils'
 import { expect, use } from 'chai'
 
@@ -160,17 +160,17 @@ export default class Elements {
     }
     async clickDoubleClick() {
         await doubleClick(page, '#doubleClickBtn')
-        await page.waitForSelector('doubleClickMessage')
+        await page.waitForSelector('#doubleClickMessage')
     }
     async clickRightClick() {
-        let rghtBut = await page.waitForSelector('#rightClickBtn')
-        await rghtBut.click({
-            button: 'right',
-          })
+        await rightClick(page, '#rightClickBtn')
         await page.waitForSelector('#rightClickMessage')
     }
     async clickOnDynamicButton() {
-        await click(page, '//*[@id="7coU4"]')
-        await page.waitForSelector('dynamicClickMessage')
+        await page.evaluate(() => {
+            [...document.querySelectorAll('.btn.btn-primary')].find(element => element.textContent === 'Click Me').click();
+          })
+        await page.waitForSelector('#dynamicClickMessage')
     }
+    async 
 }

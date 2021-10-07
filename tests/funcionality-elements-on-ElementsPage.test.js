@@ -6,7 +6,7 @@ describe('Checking if every functionality works in ElementsPage', () => {
     let homepage
     let elementspage
     let elements
-    jest.setTimeout(10000)
+    jest.setTimeout(20000)
 
     beforeAll(async() =>{
         homepage = new HomePage()
@@ -41,13 +41,18 @@ describe('Checking if every functionality works in ElementsPage', () => {
         await elements.deletingStrings()
         await elements.updateString()
     })
-    it.only('checkIfButtonsWork', async() => {
+    it('checkIfButtonsWork', async() => {
         await elementspage.visit()
         await elementspage.elementsAreLoaded()
         await elementspage.clickOnButtons()
         await elements.clickDoubleClick()
         await elements.clickRightClick()
         await elements.clickOnDynamicButton()
+    })
+    it('checkIfLinksWork', async() => {
+        await elementspage.visit()
+        await elementspage.elementsAreLoaded()
+        await elementspage.clickOnLinks()
     })
 
 
